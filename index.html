@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order Your Smoothie</h1>
+
+    <!-- Smoothie Order Form -->
+    <form id="smoothieForm">
+        <label for="base">Choose a base:</label>
+        <select id="base" name="base">
+            <option value="milk">Milk ($2)</option>
+            <option value="yogurt">Yogurt ($3)</option>
+            <option value="almond-milk">Almond Milk ($4)</option>
+        </select><br><br>
+
+        <label for="fruit">Choose your fruits (select multiple):</label><br>
+        <input type="checkbox" id="banana" name="fruit" value="banana">
+        <label for="banana">Banana ($1)</label><br>
+        <input type="checkbox" id="strawberry" name="fruit" value="strawberry">
+        <label for="strawberry">Strawberry ($1.5)</label><br>
+        <input type="checkbox" id="blueberry" name="fruit" value="blueberry">
+        <label for="blueberry">Blueberry ($2)</label><br><br>
+
+        <label for="add-ons">Choose add-ons (select multiple):</label><br>
+        <input type="checkbox" id="protein" name="add-ons" value="protein">
+        <label for="protein">Protein ($2)</label><br>
+        <input type="checkbox" id="flax-seed" name="add-ons" value="flax-seed">
+        <label for="flax-seed">Flax Seed ($1.5)</label><br><br>
+
+        <button type="button" onclick="createSmoothie()">Order Smoothie</button>
+    </form>
+
+    <!-- Display Smoothie Description, Price, and Image -->
+    <div id="smoothieDescription"></div>
+    <div id="smoothieImage" style="display: none;">
+        <img src="" alt="Smoothie Image" id="smoothieImageDisplay" width="200">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
